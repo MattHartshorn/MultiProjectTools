@@ -1,0 +1,104 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CommandTable xmlns="http://schemas.microsoft.com/VisualStudio/2005-10-18/CommandTable" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <Extern href="stdidcmd.h" />
+  <Extern href="vsshlids.h" />
+
+  <Commands package="guidProjectImportToolsPackage">
+    <!-- Groups -->
+    <Groups>
+
+      <!-- Solution Command Groups -->
+      <Group guid="guidSolutionCmdSet" id="SolutionMenuGroup" priority="0x0150">
+        <Parent guid="guidSolutionCmdSet" id="SolutionMenu" />
+      </Group>
+      
+      <!-- Project Command Groups -->
+      <Group guid="guidProjectCmdSet" id="ProjectMenuGroup" priority="0x0600">
+        <Parent guid="guidSHLMainMenu" id="IDM_VS_CTXT_REFERENCEROOT" />
+      </Group>
+
+      <Group guid="guidProjectCmdSet" id="ProjectMenuGroup" priority="0x0800">
+        <Parent guid="guidSHLMainMenu" id="IDM_VS_CTXT_PROJNODE" />
+      </Group>
+    </Groups>
+
+    <!-- Menus -->
+    <Menus>
+      <Menu guid="guidSolutionCmdSet" id="SolutionMenu" priority="0x001" type="Menu">
+        <Parent guid="guidSHLMainMenu" id="IDG_VS_CTXT_SOLUTION_PROPERTIES"/>
+        <Strings>
+          <ButtonText>[PH] Resolve References</ButtonText>
+        </Strings>
+      </Menu>
+    </Menus>
+
+    <!-- Buttons -->
+    <Buttons>
+      
+      <!-- Solution Command Buttons -->
+      <Button guid="guidSolutionCmdSet" id="cmdAddExistingProjects" priority="0x0100" type="Button">
+        <Parent guid="guidSHLMainMenu" id="IDG_VS_CTXT_SOLUTION_ADD" />
+        <Icon guid="guidImageCatelog" id="AddProjects" />
+        <Strings>
+          <ButtonText>[PH] Add Existing Projects...</ButtonText>
+        </Strings>
+      </Button>
+
+      <!-- Solution Menu Group Buttons -->
+      <Button guid="guidSolutionCmdSet" id="cmdCreateProjectReferences" priority="0x001" type="Button">
+        <Parent guid="guidSolutionCmdSet" id="SolutionMenuGroup" />
+        <Icon guid="guidImageCatelog" id="Reference" />
+        <Strings>
+          <ButtonText>[PH] Create Project References...</ButtonText>
+        </Strings>
+      </Button>
+
+      <Button guid="guidSolutionCmdSet" id="cmdLoadReferenceFiles" priority="0x002" type="Button">
+        <Parent guid="guidSolutionCmdSet" id="SolutionMenuGroup" />
+        <Icon guid="guidImageCatelog" id="ModuleFile" />
+        <Strings>
+          <ButtonText>[PH] Load Reference Files...</ButtonText>
+        </Strings>
+      </Button>
+
+      <!-- Project Command Buttons -->
+      <Button guid="guidProjectCmdSet" id="cmdResolveReferences" priority="0x0100" type="Button">
+        <Parent guid="guidProjectCmdSet" id="ProjectMenuGroup" />
+        <Icon guid="guidImageCatelog" id="ReferenceWarning" />
+        <Strings>
+          <ButtonText>[PH] Resolve References...</ButtonText>
+        </Strings>
+      </Button>
+    </Buttons>
+
+    <!-- Images -->
+    <Bitmaps>
+      <Bitmap guid="guidImageCatelog" href="Resources\CommandIcons.png" usedList="AddProjects, ReferenceWarning, Reference, ModuleFile" />
+    </Bitmaps>
+  </Commands>
+
+  <!-- Symbols -->
+  <Symbols>
+    <GuidSymbol name="guidProjectImportToolsPackage" value="{0d25ea8f-216b-4893-b5b1-61b29f7f4d1a}" />
+
+    <GuidSymbol name="guidImageCatelog" value="{d79d376d-8c80-4b54-83fc-dd1879df4c4d}">
+      <IDSymbol name="AddProjects" value="0x0001" />
+      <IDSymbol name="ReferenceWarning" value="0x0002" />
+      <IDSymbol name="Reference" value="0x0003" />
+      <IDSymbol name="ModuleFile" value="0x0004" />
+    </GuidSymbol>
+
+    <GuidSymbol name="guidSolutionCmdSet" value="{41d4d218-2a81-4e87-b97f-27a3711f6bf8}">
+      <IDSymbol name="SolutionMenu" value="0x1000" />
+      <IDSymbol name="SolutionMenuGroup" value="0x0100" />
+      <IDSymbol name="cmdAddExistingProjects" value="0x0001" />
+      <IDSymbol name="cmdCreateProjectReferences" value="0x0002"/>
+      <IDSymbol name="cmdLoadReferenceFiles" value="0x0003"/>
+    </GuidSymbol>
+  
+    <GuidSymbol name="guidProjectCmdSet" value="{b7c7912a-63aa-47ae-a2bc-08447aaf625d}">
+      <IDSymbol name="ProjectMenuGroup" value="0x0100" />
+      <IDSymbol name="cmdResolveReferences" value="0x0001"/>
+    </GuidSymbol>
+  </Symbols>
+</CommandTable>
