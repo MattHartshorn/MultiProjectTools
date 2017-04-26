@@ -7,7 +7,7 @@ using System.Windows.Forms;
 // a vista-style dialog.
 // ------------------------------------------------------------------
 
-namespace ProjectImportTools.Util
+namespace MultiProjectTools.Util
 {
     /// <summary>
     /// Wraps System.Windows.Forms.OpenFileDialog to make it present

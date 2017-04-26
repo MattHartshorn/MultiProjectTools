@@ -23,8 +23,8 @@
     <ProjectGuid>{C97C7A78-0951-47EB-B7E6-9C8E6FBD3671}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>ProjectImportTools</RootNamespace>
-    <AssemblyName>ProjectImportTools</AssemblyName>
+    <RootNamespace>MultiProjectTools</RootNamespace>
+    <AssemblyName>MultiProjectTools</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <GeneratePkgDefFile>true</GeneratePkgDefFile>
     <IncludeAssemblyInVSIXContainer>true</IncludeAssemblyInVSIXContainer>

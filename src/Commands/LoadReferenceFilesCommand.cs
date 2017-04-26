@@ -4,7 +4,7 @@ using System.Globalization;
 using Microsoft.VisualStudio.Shell;
 using Microsoft.VisualStudio.Shell.Interop;
 
-namespace ProjectImportTools.Commands
+namespace MultiProjectTools.Commands
 {
     internal sealed class LoadReferenceFilesCommand :BaseCommand
     {
